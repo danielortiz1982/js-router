@@ -1,0 +1,10 @@
+.header{
+    padding: 45px 0;
+}
+.header h1{
+    padding: 15px 0;
+}
+
+#app h1{
+    text-decoration: underline;
+}
