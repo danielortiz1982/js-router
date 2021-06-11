@@ -12,7 +12,7 @@ export default class JSRouter {
                     isMatch: location.pathname === route.path
                 }
             });
-            let match = potentialMatches.find( potentialMatche => potentialMatche.isMatch);
+            let match = potentialMatches.find(potentialMatche => potentialMatche.isMatch);
             if(!match){
                 match = {
                     route: routes[0],
