@@ -1,3 +1,7 @@
+import Dashboard from '../views/Dashboard.js';
+import Posts from '../views/Posts.js';
+import Settings from '../views/Settings.js';
+
 const navigateToRoute = url => {
     history.pushState(null, null, url);
     jsRouter();
@@ -5,9 +9,9 @@ const navigateToRoute = url => {
 
 const jsRouter = async () => {
     const routes = [
-        {path: '/', view: () => console.log('Viewing Dashboard')},
-        {path: '/posts', view: () => console.log('Viewing Posts')},
-        {path: '/settings', view: () => console.log('Viewing Settings')}
+        {path: '/', view: Dashboard},
+        {path: '/posts', view: Posts},
+        {path: '/settings', view: Settings}
     ];
 
     // Test each route for potential match
@@ -17,18 +21,17 @@ const jsRouter = async () => {
             isMatch: location.pathname === route.path
         }
     });
-
     let match = potentialMatches.find( potentialMatche => potentialMatche.isMatch);
-
     if(!match){
         match = {
             route: routes[0],
             isMatch: true
         }
     }
-
-    console.log(match.route.view());
+    document.querySelector(`#app`).innerHTML = await new match.route.view().getHtml();
 };
+
+window.addEventListener('popstate', jsRouter);
 
 document.addEventListener('DOMContentLoaded', () => {
     document.body.addEventListener('click', event => {
@@ -36,5 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
             event.preventDefault();
             navigateToRoute(event.target.href);
         }
-    })
+    });
+
+    jsRouter();
 });
