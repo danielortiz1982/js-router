@@ -1,3 +1,6 @@
+body{
+    background-color: whitesmoke;
+}
 .header{
     padding: 45px 0;
 }
@@ -7,4 +10,10 @@
 
 #app h1{
     text-decoration: underline;
+}
+
+.form-box{
+    display: block;
+    padding: 20px;
+    background-color: #ffffff;
 }
