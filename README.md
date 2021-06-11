@@ -8,7 +8,7 @@
      rm -rf demo
 
 ## JSRouter Usage
-> JSRouter is a ES6 exported class that helps createa and manage client side routes and views.
+> JSRouter is a ES6 exported class that helps create and manage client side routes and views.
 ##### Import the JSRouter into your own JavaScript file.
     import JSRouter from './js-router.js';
 
