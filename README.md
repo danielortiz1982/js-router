@@ -7,7 +7,7 @@
 ##### Via NPM
     npm install jsrouter
 
-##### (Optional) Remove/Delete Demo directory
+##### (Optional) To remove/delete demo directory, open up a terminal window and paste
      rm -rf demo
 
 ## JSRouter Usage
@@ -17,4 +17,19 @@
 import JSRouter from './js-router.js';
 ```
 
+##### Create a new instance of the JSRouter constructor
+```js
+const router = new JSRouter();
+```
+
 ##### Router configuration
+> To create a router configuration define an array containing objects, each object will define a route along with a view.
+```js
+const routes = [
+    {path: '/', view: Home},
+    {path: '/dashboard', view: Dashboard},
+    {path: '/posts', view: Posts},
+    {path: '/settings', view: Settings},
+    {path: '/contact', view: Contact}
+];
+```
