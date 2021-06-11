@@ -8,5 +8,4 @@
      rm -rf demo
 
 ##### Import the JSRouter
-    ```js
     import JSRouter from './js-router.js';
