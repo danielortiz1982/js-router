@@ -1,6 +1,5 @@
 export default class JSRouter {
-    constructor(){
-    }
+    constructor(){}
     init(routes, app){
         const navigateToRoute = url => {
             history.pushState(null, null, url);
@@ -32,5 +31,13 @@ export default class JSRouter {
             });
             jsRouter();
         });
-    }
-}
+    };
+
+    setTitle(title){
+        document.title = title;
+    };
+
+    async getHtml() {
+        return '';
+    };
+};

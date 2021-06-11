@@ -1,5 +1,5 @@
-import AbstractView from './AbstractView.js';
-export default class extends AbstractView {
+import JSRouter from '../js/js-router.js'
+export default class extends JSRouter {
     constructor(){
         super();
         this.setTitle('Dashboard');
