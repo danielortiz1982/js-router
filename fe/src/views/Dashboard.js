@@ -13,6 +13,9 @@ export default class extends JSRouter {
                 <h1>${title}</h1>
                 <h2>${header}</h2>
                 <p>${msg}</p>
+                <div class="img">
+                    <img class="img-fluid" src="src/img/js-img.png">
+                </div>
             </div>`;
         return html;
     }

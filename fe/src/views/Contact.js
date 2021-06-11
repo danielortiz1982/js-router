@@ -15,6 +15,9 @@ export default class extends JSRouter {
                 <div class="row">
                     <div class="col-md-8">
                         <p>${msg}</p>
+                        <div>
+                            <img class="img-fluid" src="src/img/contact.jpeg">
+                        </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-box">

@@ -17,3 +17,8 @@ body{
     padding: 20px;
     background-color: #ffffff;
 }
+
+.post{
+    padding: 25px 0;
+    border-bottom: solid 2px #ccc;
+}
