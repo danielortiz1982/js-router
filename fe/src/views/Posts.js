@@ -9,7 +9,7 @@ export default class extends JSRouter {
         const title = 'Post';
         const postsData = await fetch('https://jsonplaceholder.typicode.com/posts');
         const posts = await postsData.json();
-        html += `<div class="posts">`;
+        html += `<div class="posts container">`;
         posts.forEach(element => {
             html += `<div class="post" id="post-id-${element.id}">`;
             html += `<h2>${element.title}</h2>`;

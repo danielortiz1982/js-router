@@ -38,6 +38,6 @@ export default class JSRouter {
     };
 
     async getHtml() {
-        return '';
+        return ``;
     };
 };
